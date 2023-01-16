@@ -23,9 +23,21 @@ with open(budget_data_csv, encoding='utf') as csvfile:
         lastmonth = int(row[1])
         changes_list.append(change)
     
+    greatest_increase = [date_list[changes_list.index(max(changes_list))], max(changes_list)]
+    greatest_decrease = [date_list[changes_list.index(min(changes_list))], min(changes_list)]
     changes_list.pop(0)
     average_change = round(sum(changes_list)/len(changes_list), 2)
 
-    print(len(date_list))
-    print(total)
-    print(average_change)
+    print("Financial Analysis")
+    print('')
+    print('---------------------------------------------')
+    print('')
+    print(F'Total Months: {len(date_list)}')
+    print('')
+    print(f'Total: ${total}')
+    print('')
+    print(f'Average Change: ${average_change}')
+    print('')
+    print(f'Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})')
+    print('')
+    print(f'Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})')
