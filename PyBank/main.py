@@ -30,7 +30,7 @@ with open(budget_data_csv, encoding='utf') as csvfile:
 
     print("Financial Analysis")
     print('')
-    print('---------------------------------------------')
+    print('-------------------------------')
     print('')
     print(F'Total Months: {len(date_list)}')
     print('')
@@ -41,3 +41,22 @@ with open(budget_data_csv, encoding='utf') as csvfile:
     print(f'Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})')
     print('')
     print(f'Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})')
+
+
+fin_analysis_txt= os.path.join('Analysis', 'Financial_Analysis.txt')
+
+with open(fin_analysis_txt, 'w') as textfile:
+    textfile.write('Financial Analysis\n')
+    textfile.write('\n')
+    textfile.write('-------------------------------\n')
+    textfile.write('\n')
+    textfile.write(F'Total Months: {len(date_list)}\n')
+    textfile.write('\n')
+    textfile.write(f'Total: ${total}\n')
+    textfile.write('\n')
+    textfile.write(f'Average Change: ${average_change}\n')
+    textfile.write('\n')
+    textfile.write(f'Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})\n')
+    textfile.write('\n')
+    textfile.write(f'Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})\n')
+    textfile.close
