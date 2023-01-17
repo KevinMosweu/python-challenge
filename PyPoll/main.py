@@ -20,9 +20,6 @@ with open(election_data_csv, encoding='utf') as csvfile:
             candidate_list.append(row[2])
             candidate = row[2]
     
-    #have all the votes stored in vote list
-    #now just need to go through candidate list
-    #and add 1 for each candidate when their name shows up in votes list
     
 print("Election Results")
 print('')
