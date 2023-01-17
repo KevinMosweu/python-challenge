@@ -58,5 +58,5 @@ with open(fin_analysis_txt, 'w') as textfile:
     textfile.write('\n')
     textfile.write(f'Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increase[1]})\n')
     textfile.write('\n')
-    textfile.write(f'Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})\n')
+    textfile.write(f'Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})')
     textfile.close
